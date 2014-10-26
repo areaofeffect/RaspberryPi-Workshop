@@ -14,6 +14,5 @@ Huckleberry <br/>
 Salmonberry <br/>
 Strawberry <br/>
 Elderberry <br/>
-Gooseberry <br/>
 Goji Berry <br/>
 and more... http://en.wikipedia.org/wiki/Category:Berries
