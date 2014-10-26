@@ -3,18 +3,17 @@ RaspberryPi
 
 Raspberry Pi for Artists Workshop @_reverse_art gallery - Examples and Tutorials
 
-'''
+
 ### Berries
-Raspberry
-Blackberry
-Blueberry
-Cranberry
-Gooseberry
-Huckleberry
-Salmonberry
-Strawberry
-Elderberry
-Gooseberry
-Goji Berry
+Raspberry <br/>
+Blackberry <br/>
+Blueberry <br/>
+Cranberry <br/>
+Gooseberry <br/>
+Huckleberry <br/>
+Salmonberry <br/>
+Strawberry <br/>
+Elderberry <br/>
+Gooseberry <br/>
+Goji Berry <br/>
 and more... http://en.wikipedia.org/wiki/Category:Berries
-'''
