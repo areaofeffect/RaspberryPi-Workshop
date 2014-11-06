@@ -1,0 +1,29 @@
+# /etc/init.d/mynodeserver
+
+### BEGIN INIT INFO
+# Provides:          mynodeserver
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Example initscript
+# Description:       This service is used to launch a website with nodejs
+### END INIT INFO
+
+
+case "$1" in 
+    start)
+        echo "Starting mynodeserver"
+        su pi -c 'node /home/pi/Documents/my-yo-project/server.js < /dev/null &'
+        ;;
+    stop)
+        echo "Stopping mynodeserver"
+        killall node
+        ;;
+    *)
+        echo "Usage: /etc/init.d/mynodeserver start|stop"
+        exit 1
+        ;;
+esac
+
+exit 0
