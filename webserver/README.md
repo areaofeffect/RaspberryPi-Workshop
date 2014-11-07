@@ -1,4 +1,4 @@
-#Rasperry Pi as a Web Server
+#Raspberry Pi as a Web Server
 
 ##Step 1: Install Node.js
 Install Node.js on the Raspberry Pi using [Node Version Manager (nvm)](https://github.com/creationix/nvm) and get it running when you start up your Pi.

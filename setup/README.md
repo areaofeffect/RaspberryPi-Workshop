@@ -1,4 +1,4 @@
-#Rasperry Pi Set Up
+#Raspberry Pi Set Up
 
 ##Backing up your SD card
 
