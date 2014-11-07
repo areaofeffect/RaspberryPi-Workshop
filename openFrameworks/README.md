@@ -1,1 +1,1 @@
-#Rasperry Pi & openFrameworks
+#Raspberry Pi & openFrameworks

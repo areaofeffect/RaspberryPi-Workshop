@@ -1,6 +1,7 @@
 #Raspberry Pi as a Web Server
 
-##Step 1: Install Node.js
+
+##001: Install Node.js
 Install Node.js on the Raspberry Pi using [Node Version Manager (nvm)](https://github.com/creationix/nvm) and get it running when you start up your Pi.
 
 1. Make sure your Pi has a c++ compiler installed. You can do this by running the following three commands.
@@ -28,7 +29,7 @@ Install Node.js on the Raspberry Pi using [Node Version Manager (nvm)](https://g
 		sudo nano ~/.profile
 		sudo reboot
 
-##Step 2: Build a web site and serve it from your Pi
+##002: Build a web site and serve it from your Pi
 Build a web site and serve it from your Raspberry Pi
 
 A pre-built web site is available here (link). Or if you want to build your own we can quickly scaffold something with [Yeoman](http://yeoman.io/learning/)
@@ -54,19 +55,33 @@ Then launch the site locall
 
 	node server.js	
 
-##Step 3: Automatically serve your web site on start up
-Make it run automatically on launch. ... more explanation about writing upstart scripts
+##003: Automatically serve your web site on start up
+To set up your web site to automatically launch itself when you boot your Pi up, we will add a shell script to the /etc/init.d folder.
+
+To create a new script you can use the following command. [Here's](https://github.com/justpitbulls/RaspberryPi-Workshop/blob/master/webserver/files/autolaunch.txt) some text to enter.
 
 	sudo nano /etc/init.d/mynodeserver
-	sudo chmod +x /etc/init.d/mynodeserver
-	sudo /etc/init.d/mynodeserver start
-	which node
-make some sym links (add more info about why this is needed):
 
-	n=$(which node);n=${n%/bin/node}; chmod -R 755 $n/bin/*; sudo cp -r $n/{bin,lib,share} /usr/local
+Next modify it's permissions so that is executable
+	sudo chmod +x /etc/init.d/mynodeserver
+
+You can use these commands to start/stop the process defined in your script
 
 	sudo /etc/init.d/mynodeserver start
 	sudo /etc/init.d/mynodeserver stop
+
+If you had some trouble executing these commands it was probably a result of node not being availble from your $PATH. Type in the following command
+
+	which node
+
+The result is likely pointing to your /home folder which is not accessible to init.d scripts. Let's make some sym links in order to get this to run:
+
+	n=$(which node);n=${n%/bin/node}; chmod -R 755 $n/bin/*; sudo cp -r $n/{bin,lib,share} /usr/local
+
+Once this is complete test the previous commands again. 
+
+Now that we have that working we can add it to the default scripts and this will make it auto launch when you boot up.
+
 	sudo update-rc.d mynodeserver defaults
 	sudo reboot
 
