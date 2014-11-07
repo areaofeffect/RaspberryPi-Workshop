@@ -19,20 +19,24 @@ Install Node.js on the Raspberry Pi using [Node Version Manager (nvm)](https://g
 
 		nvm install 0.10.28
 	    nvm alias default 0.10.28
-4. Now let's save these settings so that when you reboot you can automatically use the nvm command in the terminal and your default version of node will be used. Add these two lines to ~/.bashrc and ~/.profile
+4. Now let's save these settings so that when you reboot you can automatically use the nvm command in the terminal and your default version of node will be used. We edit `~/.bashrc` and `~/.profile` using the following commands.
 
-	  `source ~/.nvm/nvm.sh`
-
-	  `nvm use default`
+	```
+	sudo nano ~/.bashrc
+	sudo nano ~/.profile
+	```
 	
-		sudo nano ~/.bashrc
-		sudo nano ~/.profile
-		sudo reboot
+	Add these two lines at the bottom of each file.	
+	
+	```
+	source ~/.nvm/nvm.sh
+	nvm use default
+	```
 
 ##002: Build a web site and serve it from your Pi
 Build a web site and serve it from your Raspberry Pi
 
-A pre-built web site is available here (link). Or if you want to build your own we can quickly scaffold something with [Yeoman](http://yeoman.io/learning/)
+A pre-built web site is available here (link). Or if you want to build your own we can quickly scaffold a web app with [Yeoman](http://yeoman.io/learning/)
 Quick scaffolding with Yeoman
 
 	sudo npm install -g yo
@@ -41,17 +45,23 @@ Quick scaffolding with Yeoman
 	mkdir my-yo-project
 	cd my-yo-project
 	yo webapp
+To test locally:
+
 	grunt serve
+To compile for distribution:
+
+	grunt dist
 	
-Make a simple Express.js file to run this front end code. (link to file)
+*You can scaffold right on your Pi with Yeaomn but npm installs and grunt are very slow. There are also compatibility issues with some npm modules. For example, [compiling your web app for distribution](https://github.com/yeoman/generator-webapp/issues/348) requires a version of PhantomJS specifically compiled for the [Raspberry Pi](https://github.com/aeberhardo/phantomjs-linux-armv6l)*
 
-You can this type of development on your Pi but it is very slow and there are some issues with some npm modules. For example, [compiling your web app for distribution](https://github.com/yeoman/generator-webapp/issues/348) requires a version of PhantomJS specifically compiled for the [Raspberry Pi](https://github.com/aeberhardo/phantomjs-linux-armv6l)
+Ok, let's take that simple web app and serve it. Make a [simple Express.js file](https://github.com/justpitbulls/RaspberryPi-Workshop/blob/master/webserver/files/server.js) and put it in your distribution folder.
 
-Copy the web site files over to your ~/Documents directory. And run this command in the folder.
+Copy all of the distribution files over to your ~/Documents/my-yo-project directory. Then in terminal set up your packages.
 
+	cd ~/Documents/my-yo-project
 	npm install express --save
 
-Then launch the site locall
+And run the site which will be viewable at `http://localhost:8080` on the Pi, or `http://{your pi name}.local:8080` from any other computer on the same network.
 
 	node server.js	
 
