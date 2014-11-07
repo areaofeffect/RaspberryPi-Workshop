@@ -12,7 +12,7 @@ This will show you the name of your disk to use in the following command in plac
 	
 ##Restoring from previous back up
 
-	sudo dd if=/path/to/image of=/dev/r{disk}
+	sudo dd if=/path/to/image of=/dev/r{disk} bs=5m
 	
 if you get ‘Resource Busy’
 
