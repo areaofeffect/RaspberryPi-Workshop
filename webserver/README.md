@@ -52,7 +52,7 @@ To compile for distribution:
 
 	grunt dist
 	
-*You can scaffold right on your Pi with Yeaomn but npm installs and grunt are very slow. There are also compatibility issues with some npm modules. For example, [compiling your web app for distribution](https://github.com/yeoman/generator-webapp/issues/348) requires a version of PhantomJS specifically compiled for the [Raspberry Pi](https://github.com/aeberhardo/phantomjs-linux-armv6l)*
+*You can scaffold right on your Pi with Yeoman but npm installs and grunt are very slow. There are also compatibility issues with some npm modules. For example, [compiling your web app for distribution](https://github.com/yeoman/generator-webapp/issues/348) requires a version of PhantomJS specifically compiled for the [Raspberry Pi](https://github.com/aeberhardo/phantomjs-linux-armv6l)*
 
 Ok, let's take that simple web app and serve it. Make a [simple Express.js file](https://github.com/justpitbulls/RaspberryPi-Workshop/blob/master/webserver/files/server.js) and put it in your project folder.
 
