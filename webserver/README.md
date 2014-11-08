@@ -36,7 +36,7 @@ Install Node.js on the Raspberry Pi using [Node Version Manager (nvm)](https://g
 ##002: Build a web site and serve it from your Pi
 Build a web site and serve it from your Raspberry Pi
 
-A pre-built web site is available here (link). Or if you want to build your own we can quickly scaffold a web app with [Yeoman](http://yeoman.io/learning/)
+A pre-built web site is available [here](https://github.com/justpitbulls/RaspberryPi-Workshop/blob/master/webserver/files/website). Or if you want to build your own we can quickly scaffold a web app with [Yeoman](http://yeoman.io/learning/)
 Quick scaffolding with Yeoman
 
 	sudo npm install -g yo
@@ -54,9 +54,9 @@ To compile for distribution:
 	
 *You can scaffold right on your Pi with Yeaomn but npm installs and grunt are very slow. There are also compatibility issues with some npm modules. For example, [compiling your web app for distribution](https://github.com/yeoman/generator-webapp/issues/348) requires a version of PhantomJS specifically compiled for the [Raspberry Pi](https://github.com/aeberhardo/phantomjs-linux-armv6l)*
 
-Ok, let's take that simple web app and serve it. Make a [simple Express.js file](https://github.com/justpitbulls/RaspberryPi-Workshop/blob/master/webserver/files/server.js) and put it in your distribution folder.
+Ok, let's take that simple web app and serve it. Make a [simple Express.js file](https://github.com/justpitbulls/RaspberryPi-Workshop/blob/master/webserver/files/server.js) and put it in your project folder.
 
-Copy all of the distribution files over to your ~/Documents/my-yo-project directory. Then in terminal set up your packages.
+Copy all of the files over to your ~/Documents/my-yo-project directory. Then in terminal set up your packages.
 
 	cd ~/Documents/my-yo-project
 	npm install express --save
@@ -73,6 +73,7 @@ To create a new script you can use the following command. [Here's](https://githu
 	sudo nano /etc/init.d/mynodeserver
 
 Next modify it's permissions so that is executable
+
 	sudo chmod +x /etc/init.d/mynodeserver
 
 You can use these commands to start/stop the process defined in your script
