@@ -1,4 +1,5 @@
 ## Raspberry Pi for Artists
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/justpitbulls/RaspberryPi-Workshop?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 SATURDAY, NOVEMBER 8TH, 12PM – 7PM
 
