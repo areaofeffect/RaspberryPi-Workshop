@@ -1,13 +1,11 @@
 #Raspberry Pi & Video
 
 
-[http://http://www.gaggl.com/2013/01/installing-omxplayer-on-raspberry-pi/](http://http://www.gaggl.com/2013/01/installing-omxplayer-on-raspberry-pi/)
+#####Installing from apt-get
 
 	sudo apt-get install omxplayer
 
-#####Installing the latest release of omxplayer
-
-[http://omxplayer.sconde.net/](http://omxplayer.sconde.net/)
+#####Installing the latest release of omxplayer (replace version number with the latest from [http://omxplayer.sconde.net/](http://omxplayer.sconde.net/))
 
 	sudo apt-get install libpcre3 fonts-freefont-ttf libssh-4 
 	sudo apt-get install fbset
