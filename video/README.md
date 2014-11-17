@@ -23,26 +23,26 @@ Extract the file and a folder called `omxplayer-dist` will appear. Then you can 
 
 Next open Terminal,  and ssh in and make sure you are in the home directory with this command:
 
-  cd ~/
+	  cd ~/
 
 Run this to use this new version of omxplayer.
 
-  sudo cp -R omxplayer-dist/* /
+	  sudo cp -R omxplayer-dist/* /
 
 To make sure you have the right version installed type this command.
 
-  omxplayer --version
+	  omxplayer --version
 
 You should see this:
 
-  omxplayer - Commandline multimedia player for the Raspberry Pi
-        Build date: Tue, 11 Nov 2014 20:41:26 +0000
-        Version   : c39997b [seamless-looping]
-        Repository: UNKNOWN
+	  omxplayer - Commandline multimedia player for the Raspberry Pi
+	        Build date: Tue, 11 Nov 2014 20:41:26 +0000
+	        Version   : c39997b [seamless-looping]
+	        Repository: UNKNOWN
 
 
 
 Now seamlessly looping a video should work with this command.
 
-  omxplayer --loop {path to your video here}
+	  omxplayer --loop {path to your video here}
 		
