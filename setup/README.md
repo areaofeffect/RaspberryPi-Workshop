@@ -1,4 +1,4 @@
-#Rasperry Pi Workshop
+# Rasperry Pi Workshop
 
 ## 000 download
 **Rasbian Wheezy** <br />
@@ -26,7 +26,7 @@ notes: ctrl+o to write out, ctrl+x to quit
 		sudo update-rc.d avahi-daemon defaults
 		sudo insserv avahi-daemon
 
-####File sharing and autodiscovery
+#### File sharing and autodiscovery
 Makes your Raspberry Pi viewable through Finder.
 <http://4dc5.com/2012/06/12/setting-up-vnc-on-raspberry-pi-for-mac-access/>
 
@@ -65,7 +65,7 @@ Makes your Raspberry Pi viewable through Finder.
 		sudo /etc/init.d/avahi-daemon restart
 
 
-####VNC
+#### VNC
 	
 	sudo apt-get install tightvncserver
 	tightvncserver

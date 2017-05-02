@@ -1,7 +1,7 @@
-#Raspberry Pi as a Web Server
+# Raspberry Pi as a Web Server
 
 
-##001: Install Node.js
+## 001: Install Node.js
 Install Node.js on the Raspberry Pi using [Node Version Manager (nvm)](https://github.com/creationix/nvm) and get it running when you start up your Pi.
 
 1. Make sure your Pi has a c++ compiler installed. You can do this by running the following three commands.
@@ -33,7 +33,7 @@ Install Node.js on the Raspberry Pi using [Node Version Manager (nvm)](https://g
 	nvm use default
 	```
 
-##002: Build a web site and serve it from your Pi
+## 002: Build a web site and serve it from your Pi
 Build a web site and serve it from your Raspberry Pi
 
 A pre-built web site is available [here](https://github.com/justpitbulls/RaspberryPi-Workshop/blob/master/webserver/files/website). Or if you want to build your own we can quickly scaffold a web app with [Yeoman](http://yeoman.io/learning/)
@@ -65,7 +65,7 @@ And run the site which will be viewable at `http://localhost:8080` on the Pi, or
 
 	node server.js	
 
-##003: Automatically serve your web site on start up
+## 003: Automatically serve your web site on start up
 To set up your web site to automatically launch itself when you boot your Pi up, we will add a shell script to the /etc/init.d folder.
 
 To create a new script you can use the following command. [Here's](https://github.com/justpitbulls/RaspberryPi-Workshop/blob/master/webserver/files/autolaunch.txt) some text to enter.

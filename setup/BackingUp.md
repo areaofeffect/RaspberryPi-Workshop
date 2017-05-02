@@ -1,6 +1,6 @@
-#Raspberry Pi Backup
+# Raspberry Pi Backup
 
-##Backing up your SD card
+## Backing up your SD card
 
 Plug your SD card in and run this command in Terminal
 
@@ -10,7 +10,7 @@ This will show you the number of your disk to use in the following command in pl
 
 	sudo dd if=/dev/rdisk{x} of=/path/to/image bs=1m
 	
-##Restoring from previous back up
+## Restoring from previous back up
 
 	sudo dd if=/path/to/image of=/dev/rdisk{x} bs=5m
 	
